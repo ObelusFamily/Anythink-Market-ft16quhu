@@ -27,8 +27,11 @@ const ItemPreview = (props) => {
     } else {
       props.favorite(item.slug);
     }
+    
   };
-
+  if (!item.image){
+    item.image = "/placeholder.png";
+    }
   return (
     <div
       className="card bg-dark border-light p-3"
