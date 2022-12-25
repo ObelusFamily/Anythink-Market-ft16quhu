@@ -41,6 +41,7 @@ async def list_items(
         limit=items_filters.limit,
         offset=items_filters.offset,
         requested_user=user,
+        
     )
     items_for_response = [
         ItemForResponse.from_orm(item) for item in items

@@ -21,7 +21,7 @@ class ItemInCreate(RWSchema):
     title: str
     description: str
     body: Optional[str] = None
-    image: Optional[str] = None
+    image: Optional[str] = None 
     tags: List[str] = Field([], alias="tagList")
 
 
@@ -42,3 +42,4 @@ class ItemsFilters(BaseModel):
     favorited: Optional[str] = None
     limit: int = Field(DEFAULT_ITEMS_LIMIT, ge=1)
     offset: int = Field(DEFAULT_ITEMS_OFFSET, ge=0)
+    
